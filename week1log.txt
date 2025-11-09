@@ -1,0 +1,19 @@
+Week 1 Log (Nov 4 – Nov 9, 2025)
+
+- Set up the public GitHub repo CAP6415_F25_project-Finding-and-solving-hard-to-generate-examplesn and sent the link to vadzic@fau.edu.
+- Defined project scope around “Finding and solving hard-to-generate examples,” selecting road speed bumps and similar roadway fixtures as the primary target class.
+- Conducted a quick literature review:
+  • Surveyed papers on diffusion failure cases and fine-tuning for rare concepts (noted DreamBooth, Textual Inversion, LoRA resources).
+  • Collected references on synthetic data augmentation for perception of small road features.
+- Drafted README skeleton with abstract, planned folder structure, dependency placeholders, and initial experiment roadmap.
+- Created repository scaffolding: `src/`, `configs/`, `results/`, `docs/`, `logs/`, and added `.gitignore`, `requirements.txt` baseline.
+- Established development environment decision: Python 3.10 with Conda, PyTorch + HuggingFace Diffusers; verified GPU availability on local setup.
+- Sketched baseline workflow for Week 2:
+  • Gather prompts referencing speed bumps and related terms.
+  • Run SDXL inference script to confirm generation difficulty.
+  • Design evaluation plan combining qualitative inspection with CLIP/BLIP-based scoring.
+- Identified datasets to explore in Week 2 (Cityscapes, BDD100K road imagery) for collecting reference images of speed bumps.
+- Next steps for Week 2:
+  • Implement `scripts/generate_baseline.py` to batch-generate images from curated prompts.
+  • Begin assembling reference dataset and annotation notes.
+  • Log quantitative/qualitative observations of baseline failures.
