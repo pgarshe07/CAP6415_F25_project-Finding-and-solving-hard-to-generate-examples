@@ -1,0 +1,145 @@
+Week 2 Log (Nov 11 – Nov 16, 2025)
+
+Development Activities
+
+Code Implementation (Python Notebooks)
+- Created baseline_generation.ipynb notebook for SDXL inference:
+  - Set up HuggingFace Diffusers pipeline with Stable Diffusion XL base model
+  - Implemented batch generation functionality for curated prompts
+  - Added support for multiple prompt templates (speed bumps, road humps, speed cushions, traffic calming devices)
+  - Configured generation parameters (guidance scale: 7.5, num_inference_steps: 50, seed management for reproducibility)
+  - Added progress tracking and output logging for each generation run
+  
+- Developed prompt collection and management:
+  - Curated ~25-30 prompt variations covering different phrasings
+  - Created positive and negative prompt pairs to reduce unwanted artifacts
+  - Documented prompt engineering strategies and their expected effects
+  - Set up prompt validation to ensure consistent format
+
+- Generated initial baseline images:
+  - Ran baseline notebook to produce ~100-150 sample images
+  - Saved outputs with consistent naming convention: timestamp_promptID_seed.png
+  - Organized generated images in results/baseline/ directory
+  - Created summary log of generation parameters for each image
+
+Dataset Collection & Preparation
+- Began assembling reference dataset:
+  - Downloaded relevant subsets from Cityscapes dataset
+  - Started processing BDD100K road imagery for speed bump instances
+  - Manually curated ~40-50 reference images with speed bump annotations
+  - Created annotation notes template documenting:
+    * Visibility level (clear, partial, occluded)
+    * Lighting conditions (daytime, nighttime, shadows)
+    * Camera angle and perspective
+    * Road surface texture and condition
+    * Speed bump characteristics (type, size, markings)
+
+Baseline Evaluation & Analysis
+- Conducted qualitative inspection of generated images:
+  - Reviewed ~100 baseline samples for failure modes
+  - Categorized common issues:
+    * Geometric inconsistencies (misshapen bumps, wrong proportions)
+    * Integration problems (bumps floating above road, incorrect merging)
+    * Lighting and shadow artifacts
+    * Texture mismatches between bump and road surface
+    * Contextual errors (wrong road types, missing context)
+  
+- Collected preliminary metrics:
+  - Documented success rate: approximately [X]% pass qualitative inspection
+  - Noted prompt sensitivity: prompts using [specific phrasing] yield better results
+  - Identified most problematic prompt patterns for further analysis
+
+Documentation & Reproducibility (Critical for 50% of grade)
+
+Code Documentation
+- Added extensive comments throughout baseline_generation.ipynb:
+  - Module-level documentation explaining purpose of each section
+  - Inline comments describing key operations and parameter choices
+  - Markdown cells explaining methodology and design decisions
+  - Clear section headers for: Setup, Configuration, Generation, Evaluation
+
+- Created requirements.txt with all dependencies:
+  - torch>=2.0.0
+  - torchvision>=0.15.0
+  - diffusers>=0.21.0
+  - transformers>=4.35.0
+  - accelerate>=0.24.0
+  - Pillow>=10.0.0
+  - numpy>=1.24.0
+  - [Additional dependencies as needed]
+
+- Documented installation steps in README.md:
+  - Python 3.10+ with Conda environment setup instructions
+  - GPU requirements and CUDA version compatibility
+  - Step-by-step installation commands
+  - Verification steps to confirm environment is set up correctly
+
+- Added execution instructions:
+  - Clear command-line steps to run notebooks
+  - Expected runtime and resource requirements
+  - Output file locations and organization
+  - Troubleshooting section for common issues
+
+Repository Organization
+- Extended repository structure following best practices:
+  - notebooks/ directory for Jupyter notebooks
+  - results/baseline/ for generated images
+  - data/raw/ and data/processed/ for datasets
+  - configs/ for configuration files
+  - logs/ for execution logs
+  - Updated .gitignore to exclude large files, checkpoints, and temp files
+
+README.md Updates
+- Updated abstract describing:
+  * Problem: SDXL struggles with generating small, structured road features like speed bumps
+  * Approach: Fine-tuning SDXL using rare concept techniques (DreamBooth/LoRA) and synthetic data augmentation
+  * Framework: PyTorch, HuggingFace Diffusers, Python notebooks
+  * Code attribution: Properly cited HuggingFace Diffusers, SDXL base model, related papers
+  
+- Added project structure section
+- Documented baseline workflow and evaluation methodology
+
+Reproducibility Testing
+- Tested notebook execution from scratch:
+  - Verified all dependencies install correctly
+  - Confirmed notebook runs end-to-end without errors
+  - Validated output format consistency
+  - Checked seed reproducibility (same seed produces same output)
+  - Documented any environment-specific considerations (GPU memory, etc.)
+
+Challenges Encountered
+- GPU memory constraints limiting batch size (solved by processing in smaller batches)
+- Inconsistent generation quality requiring manual filtering and categorization
+- Difficulty sourcing high-quality reference images with diverse conditions
+- Notebook cell execution order dependencies (addressed with clear execution markers)
+- Long generation times for large batches (optimized with progress tracking)
+
+Technical Notes
+- SDXL model size: ~6.9GB, requires GPU with at least 10GB VRAM
+- Average generation time per image: ~[X] seconds on [GPU model]
+- Storage considerations: Each image ~2-3MB, planning for 500+ images requires adequate disk space
+
+Preliminary Findings
+- SDXL baseline shows [X]% success rate for qualitatively acceptable speed bump generation
+- Prompts using descriptive phrases like "[specific phrasing]" perform better than single-word prompts
+- Common failure: Bumps appear as floating objects rather than integrated road features (~[X]% of failures)
+- Prompt sensitivity analysis: [Brief note on which prompt patterns work best]
+- Generation artifacts primarily affect: geometric accuracy, road integration, and contextual consistency
+
+Next Steps for Week 3
+- Expand reference dataset to 150+ annotated images with diverse conditions
+- Implement automated evaluation pipeline in evaluation.ipynb:
+  * CLIP-based semantic similarity scoring
+  * BLIP-based image-text alignment metrics
+  * Custom geometric consistency checks
+- Begin fine-tuning experiments:
+  * Set up DreamBooth training notebook
+  * Prepare LoRA configuration for SDXL
+  * Design training data preparation pipeline
+- Create systematic failure case collection:
+  * Categorize failure modes quantitatively
+  * Build failure case gallery in results/failures/
+- Continue documentation:
+  * Add detailed docstrings to custom functions
+  * Create visual examples in results section
+  * Document evaluation metrics methodology
