@@ -1,0 +1,422 @@
+Week 4 Log (Nov 24 – Nov 30, 2025)
+
+
+
+Development Activities
+
+
+
+Batch Generation Execution
+
+- Executed full batch generation:
+
+  - [ ] Ran baseline_generation.ipynb to generate baseline images
+
+  - [ ] Generated [X] images (target: 100-200+ baseline images)
+
+  - [ ] Organized outputs in results/baseline/ directory
+
+  - [ ] Created generation logs tracking all runs
+
+  - [ ] Verified all 23 prompt variations were successfully generated
+
+  - [ ] Documented any generation failures or errors encountered
+
+  - [ ] Recorded generation times and resource usage
+
+
+
+- Batch generation results:
+
+  - Total images generated: [X]
+
+  - Successful generations: [X]
+
+  - Failed generations: [X]
+
+  - Success rate: [X]%
+
+  - Average generation time per image: [X] seconds/minutes
+
+  - Total generation time: [X] hours/minutes
+
+  - Storage space used: [X] GB
+
+
+
+Evaluation Pipeline Implementation
+
+- Created evaluation notebook:
+
+  - [ ] Set up evaluation_notebook.ipynb or evaluation.py
+
+  - [ ] Implemented automated quality metrics (e.g., FID, CLIP score, LPIPS)
+
+  - [ ] Created systematic failure case categorization system
+
+  - [ ] Developed quantitative evaluation reports
+
+  - [ ] Documented evaluation methodology and metrics
+
+
+
+- Evaluation metrics implemented:
+
+  - [ ] Image quality metrics (resolution, sharpness, artifacts)
+
+  - [ ] Prompt-image alignment metrics
+
+  - [ ] Diversity metrics (if generating multiple per prompt)
+
+  - [ ] Failure case classification categories
+
+  - [ ] Automated scoring system
+
+
+
+- Generated evaluation reports:
+
+  - [ ] Quantitative evaluation report with metrics
+
+  - [ ] Failure case analysis and categorization
+
+  - [ ] Quality distribution statistics
+
+  - [ ] Comparison across prompt variations
+
+  - [ ] Saved evaluation results to logs/evaluation/ directory
+
+
+
+Comprehensive Image Analysis
+
+- Reviewed generated images:
+
+  - [ ] Conducted manual review of generated images
+
+  - [ ] Identified common failure patterns (e.g., missing speed bumps, incorrect road integration, artifacts)
+
+  - [ ] Categorized failure types systematically
+
+  - [ ] Documented examples of successful generations
+
+  - [ ] Created visual documentation of failure cases
+
+
+
+- Failure pattern analysis:
+
+  - [ ] Documented most common failure types
+
+  - [ ] Identified prompt variations that consistently fail
+
+  - [ ] Noted prompt variations that consistently succeed
+
+  - [ ] Analyzed relationship between prompt complexity and success rate
+
+  - [ ] Created failure case examples with explanations
+
+
+
+- Quality assessment findings:
+
+  - [ ] Overall quality distribution (excellent/good/fair/poor)
+
+  - [ ] Speed bump accuracy (correct shape, placement, integration)
+
+  - [ ] Road integration quality
+
+  - [ ] Realism and photorealism assessment
+
+  - [ ] Artifact identification and frequency
+
+
+
+Fine-Tuning Preparation
+
+- Researched fine-tuning approaches:
+
+  - [ ] Reviewed DreamBooth methodology for SDXL
+
+  - [ ] Reviewed LoRA (Low-Rank Adaptation) for SDXL
+
+  - [ ] Compared approaches (DreamBooth vs LoRA vs full fine-tuning)
+
+  - [ ] Selected approach for initial experiments: [DreamBooth/LoRA/Other]
+
+  - [ ] Documented rationale for approach selection
+
+
+
+- Training data preparation:
+
+  - [ ] Collected reference images of speed bumps (if applicable)
+
+  - [ ] Organized training data in appropriate directory structure
+
+  - [ ] Created data preparation scripts/pipeline
+
+  - [ ] Validated training data quality and quantity
+
+  - [ ] Documented training data requirements and sources
+
+
+
+- Training infrastructure setup:
+
+  - [ ] Set up training environment and dependencies
+
+  - [ ] Created fine-tuning notebook/script structure
+
+  - [ ] Configured training parameters (learning rate, batch size, etc.)
+
+  - [ ] Planned initial fine-tuning experiments
+
+  - [ ] Documented training setup and configuration
+
+
+
+Documentation & Reproducibility (Critical for 50% of grade)
+
+
+
+Code Documentation
+
+- Updated baseline_generation.ipynb:
+
+  - [ ] Added documentation for any code changes or improvements
+
+  - [ ] Updated troubleshooting section based on Week 4 experiences
+
+  - [ ] Enhanced comments and docstrings as needed
+
+  - [ ] Verified all code sections are well-documented
+
+
+
+- Created evaluation documentation:
+
+  - [ ] Documented evaluation notebook/scripts thoroughly
+
+  - [ ] Explained evaluation metrics and methodology
+
+  - [ ] Provided examples of evaluation report usage
+
+  - [ ] Documented evaluation results interpretation
+
+
+
+- Fine-tuning preparation documentation:
+
+  - [ ] Documented selected fine-tuning approach
+
+  - [ ] Created guide for training data preparation
+
+  - [ ] Documented training infrastructure setup
+
+  - [ ] Created initial fine-tuning experiment plan
+
+
+
+Repository Organization
+
+- Maintained and updated repository structure:
+
+  - [ ] Organized generated images in results/baseline/
+
+  - [ ] Created logs/evaluation/ directory for evaluation results
+
+  - [ ] Organized training data in appropriate directories (if applicable)
+
+  - [ ] Updated .gitignore to exclude large files appropriately
+
+  - [ ] Ensured all essential code and documentation are tracked
+
+  - [ ] Created README or documentation for new components
+
+
+
+Results Documentation
+
+- Created results summary:
+
+  - [ ] Documented baseline generation results
+
+  - [ ] Created summary statistics and visualizations
+
+  - [ ] Documented evaluation findings
+
+  - [ ] Created failure case examples documentation
+
+  - [ ] Prepared preliminary results for presentation
+
+
+
+Challenges Encountered
+
+- Batch generation challenges:
+
+  - [ ] Document any issues with batch generation (memory, time, errors)
+
+  - [ ] Document solutions or workarounds implemented
+
+  - [ ] Note any limitations discovered
+
+
+
+- Evaluation challenges:
+
+  - [ ] Document challenges in implementing evaluation metrics
+
+  - [ ] Note any issues with evaluation pipeline
+
+  - [ ] Document solutions and improvements made
+
+
+
+- Analysis challenges:
+
+  - [ ] Document difficulties in image analysis or categorization
+
+  - [ ] Note time constraints or resource limitations
+
+  - [ ] Document any incomplete analyses and plans for completion
+
+
+
+Technical Notes
+
+- Generation statistics:
+
+  - [ ] Total images generated: [X]
+
+  - [ ] Average generation time: [X]
+
+  - [ ] Resource usage (GPU/CPU, memory): [X]
+
+  - [ ] Storage requirements: [X]
+
+
+
+- Evaluation results summary:
+
+  - [ ] Overall quality score: [X]
+
+  - [ ] Success rate by prompt category: [X]
+
+  - [ ] Most common failure type: [X]
+
+  - [ ] Key findings: [X]
+
+
+
+- Fine-tuning approach selected:
+
+  - [ ] Method: [DreamBooth/LoRA/Full fine-tuning]
+
+  - [ ] Rationale: [Brief explanation]
+
+  - [ ] Training data: [Quantity and sources]
+
+  - [ ] Expected training time: [Estimate]
+
+
+
+Progress Assessment
+
+- Completed tasks:
+
+  - [ ] Batch generation executed successfully
+
+  - [ ] Evaluation pipeline implemented
+
+  - [ ] Comprehensive analysis conducted
+
+  - [ ] Fine-tuning preparation initiated
+
+  - [ ] Documentation updated and maintained
+
+
+
+- Progress toward goals:
+
+  - [ ] Baseline images generated: [X]/[Target]
+
+  - [ ] Evaluation metrics implemented: [X]/[Target]
+
+  - [ ] Failure cases categorized: [X] categories
+
+  - [ ] Fine-tuning approach selected: [Yes/No]
+
+  - [ ] Training data prepared: [Yes/No]
+
+
+
+- Quality of work:
+
+  - [ ] All code is well-documented
+
+  - [ ] Results are reproducible
+
+  - [ ] Evaluation methodology is sound
+
+  - [ ] Documentation is comprehensive
+
+  - [ ] Repository is well-organized
+
+
+
+Current Status
+
+- Baseline generation: [Status - Complete/In Progress/Not Started]
+
+- Evaluation pipeline: [Status - Complete/In Progress/Not Started]
+
+- Image analysis: [Status - Complete/In Progress/Not Started]
+
+- Fine-tuning preparation: [Status - Complete/In Progress/Not Started]
+
+- Documentation: [Status - Complete/In Progress/Not Started]
+
+
+
+Next Steps for Week 5
+
+- Fine-tuning execution:
+
+  * Execute initial fine-tuning experiments
+
+  * Compare fine-tuned model performance with baseline
+
+  * Iterate on training parameters based on results
+
+
+
+- Advanced evaluation:
+
+  * Implement additional evaluation metrics
+
+  * Conduct user study or expert evaluation (if applicable)
+
+  * Refine failure case categorization
+
+
+
+- Iterative improvement:
+
+  * Refine prompts based on failure analysis
+
+  * Improve fine-tuning methodology
+
+  * Expand training dataset if needed
+
+
+
+- Results compilation:
+
+  * Prepare comprehensive results report
+
+  * Create visual comparisons (baseline vs fine-tuned)
+
+  * Document lessons learned and best practices
+
